@@ -1,0 +1,23 @@
+# Runs and manages the Flask backend container pods
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  labels:
+    app: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend-container
+          image: local-backend:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9000
