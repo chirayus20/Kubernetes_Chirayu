@@ -91,6 +91,8 @@ minikube service frontend-service
 
 ---
 
+
+
 ## 📸 Architecture / Flow
 
 The application flow is:
