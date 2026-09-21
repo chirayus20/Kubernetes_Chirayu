@@ -86,7 +86,6 @@ I opened the frontend service using Minikube.
 minikube service frontend-service
 ```
 
-
 ![Browser Application Output](./assets/06-browser-app-output.png)
 **Output:** The frontend application opened successfully in the browser.
 
