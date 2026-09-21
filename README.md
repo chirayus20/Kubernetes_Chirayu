@@ -89,6 +89,28 @@ minikube service frontend-service
 ![Browser Application Output](./assets/06-browser-app-output.png)
 **Output:** The frontend application opened successfully in the browser.
 
+```markdown
+### Evidence 1: Backend Pods Live Logs (Best Visual Proof)
+
+When you perform any action on the frontend (like form submit or page refresh), the Express frontend sends a request to the Flask backend. You can clearly see this HTTP request in the backend pod logs.
+
+Run this command to check the logs:
+
+```bash
+kubectl logs -l app=backend --tail=20
+```
+
+For live logs, use:
+
+```bash
+kubectl logs -l app=backend -f
+```
+
+**Output:** You will see `HTTP/1.1 200 OK` or Flask server messages, which confirms that the backend is active and receiving requests.
+
+![Backend Live Logs](./assets/07-backend-logs.png)
+```
+
 ---
 
 ## 📸 Architecture / Flow
