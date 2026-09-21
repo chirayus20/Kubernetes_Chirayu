@@ -111,7 +111,7 @@ Backend Service (ClusterIP)
 Flask Backend (Port 9000)
 ```
 
-![Kubernetes Architecture](./assets/07-kubernetes-architecture.png)
+![Kubernetes Architecture](./assets/kubernetes-architecture.png)
 
 ```
 
