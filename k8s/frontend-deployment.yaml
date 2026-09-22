@@ -21,6 +21,23 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
+
+          # Checks if the application is still running
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+
+          # Checks if the application is ready to receive traffic
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+
           env:
             - name: BACKEND_URL
               value: "http://backend-service:9000"
