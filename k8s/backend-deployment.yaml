@@ -21,14 +21,6 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9000
-
-          containers:
-        - name: backend-container
-          image: local-backend:latest
-          imagePullPolicy: IfNotPresent
-          ports:
-            - containerPort: 9000
-
           # Inject sensitive values from Kubernetes Secret
           env:
             - name: DATABASE_URL
