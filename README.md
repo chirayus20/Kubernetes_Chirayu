@@ -112,8 +112,10 @@ kubectl logs -l app=backend -f
 ![Backend Live Logs](./assets/07-backend-logs.png)
 
 ````
+- Added livenessProbe and readinessProbe to backend and frontend deployments for health monitoring.
+- Managed sensitive configuration data securely using Kubernetes Secrets.
+````
 
----
 
 
 
@@ -139,6 +141,3 @@ Flask Backend (Port 9000)
 
 ![Kubernetes Architecture](./assets/kubernetes-architecture.png)
 
-```
-
-```
